@@ -1,0 +1,26 @@
+{
+  "name": "honeycomb-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "node scripts/clean",
+    "html": "node scripts/html",
+    "css": "node scripts/css",
+    "autoprefixer": "node node_modules/postcss-cli/bin/postcss --no-map true --use autoprefixer -c scripts -r dist/assets/css/styles.css",
+    "includes": "node scripts/includes",
+    "fonts": "node scripts/fonts",
+    "build": "npm run clean && npm run html && npm run css && npm run autoprefixer && npm run includes && npm run fonts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "fs-extra": "^4.0.0",
+    "glob": "^7.1.2",
+    "honeycomb": "git://github.com/red-gate/honeycomb-web-toolkit.git#v7.8.6",
+    "node-sass": "^4.5.3",
+    "postcss-cli": "^4.1.0",
+    "shtml2html": "^1.0.5"
+  }
+}

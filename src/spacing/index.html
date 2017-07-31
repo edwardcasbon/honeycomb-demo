@@ -1,0 +1,63 @@
+<!--#include virtual="/includes/header.html" -->
+
+<h2>Spacing</h2>
+
+<p>Honeycomb has a preset scale of values that should be used to apply spacing between elements. These are:</p>
+<ul>
+    <li>80px</li>
+    <li>70px</li>
+    <li>60px</li>
+    <li>48px</li>
+    <li>40px</li>
+    <li>32px</li>
+    <li>24px</li>
+    <li>20px</li>
+    <li>10px</li>
+    <li>4px</li>
+</ul>
+
+<h3>Applying spacing using HTML</h3>
+<p>The web toolkit provides 3 classes for applying spacing to elements. These are:</p>
+<ul>
+    <li><code>spaced</code> will apply a margin of 40px.</li>
+    <li><code>spaced--tight</code> will apply a margin of 20px.</li>
+    <li><code>spaced--loose</code> will apply a margin of 80px.</li>
+</ul>
+
+<p>To only set spacing on a particular side you can use:</p>
+<ul>
+    <li><code>spaced-left</code> will apply a left margin of 40px.</li>
+    <li><code>spaced-left--tight</code> will apply a left margin of 20px.</li>
+    <li><code>spaced-right--loose</code> will apply a right margin of 80px.</li>
+</ul>
+
+<p>Instead of margin, you can add padding using the <code>padded</code> class name instead of <code>spaced</code>.</p>
+
+<h3>Applying spacing in CSS</h3>
+<p>The web toolkit includes mixins for applying margin and padding to elements. These are the <code>margin</code> and <code>padding</code> mixins. <em>(Original hey :p)</em></p>
+<p>They work by providing a ratio and an index to the mixin. The ratio is then checked against a whitelist of allowed values, before being used to calculate the margin/padding value.</p>
+<p>The whilelists for padding and margin can be overridden in your project by resetting the <code>$hc-margin-whitelist</code> and <code>$hc-padding-whitelist</code> variables.</p>
+<p>The value is calculated by multiplying the ratio with the <code>$hc-spacing-unit</code> (currently set at 40px).</p>
+
+<h4>Examples</h4>
+<ul>
+    <li><code>@include margin(1, 'left');</code> will apply a left margin of 40px.</li>
+    <li><code>@include margin(0.6);</code> will apply a margin of 24px to every side of the element.</li>
+</ul>
+
+<h4>Playground</h4>
+<ul>
+    <li><span class="padded--80">80</span></li>
+    <li><span class="padded--70">70</span></li>
+    <li><span class="padded--60">60</span></li>
+    <li><span class="padded--48">48</span></li>
+    <li><span class="padded--40">40</span></li>
+    <li><span class="padded--32">32</span></li>
+    <li><span class="padded--24">24</span></li>
+    <li><span class="padded--20">20</span></li>
+    <li><span class="padded--10">10</span></li>
+    <li><span class="padded--4">4</span></li>
+</ul>
+
+
+<!--#include virtual="/includes/footer.html" -->

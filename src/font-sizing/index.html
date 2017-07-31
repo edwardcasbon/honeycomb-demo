@@ -1,0 +1,26 @@
+<!--#include virtual="/includes/header.html" -->
+
+<h2>Font sizing</h2>
+
+<p>Honeycomb has defined set font sizes to use on text elements. The sizes are:</p>
+<ul>
+    <li class="alpha">36px</li>
+    <li class="beta">24px</li>
+    <li class="gamma">18px</li>
+    <li>16px</li>
+    <li class="epsilon">14px</li>
+    <li class="font-size--12">12px</li>
+    <li class="font-size--10">10px</li>
+</ul>
+
+<h3>Applying colours in CSS</h3>
+<p>The web toolkit includes a <code>font-size</code> mixin for setting font sizes. The mixin outputs the font size in both px and rem values, while also setting the line height.</p>
+<p>The line height can be passed into the mixin, or if omitted will calculate the line height at <code>font-size + 10px</code>, so a 24px font size would result in a 34px line height.</p>
+
+<h4>Examples</h4>
+<ul>
+    <li><code>@include font-size(24px);</code> would set a font size of 24px with 34px line height.</li>
+    <li><code>@include font-size(24px, 48px);</code> would set a font-size of 24px with 48px line height.</li>
+</ul>
+
+<!--#include virtual="/includes/footer.html" -->

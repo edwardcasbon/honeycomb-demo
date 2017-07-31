@@ -1,0 +1,20 @@
+// Add rules for 10px and 12px font sizes.
+.font-size--12 {
+    @include font-size(12px);
+}
+
+.font-size--10 {
+    @include font-size(10px);
+}
+
+// Add classes to display spacing values.
+.padded--80 { @include padding(2); }
+.padded--70 { @include padding(1.75); }
+.padded--60 { @include padding(1.5); }
+.padded--48 { @include padding(1.2); }
+.padded--40 { @include padding(1); }
+.padded--32 { @include padding(0.8); }
+.padded--24 { @include padding(0.6); }
+.padded--20 { @include padding(0.5); }
+.padded--10 { @include padding(0.25); }
+.padded--4 { @include padding(0.1); }

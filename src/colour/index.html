@@ -1,0 +1,25 @@
+<!--#include virtual="/includes/header.html" -->
+
+<h2>Colour</h2>
+
+<p>Please refer to the <a href="http://honeycomb.red-gate.com/ui/library/elements/colour" target="_blank">Honeycomb docs</a> for the latest colour palette.</p>
+
+<h3>Applying colours in HTML</h3>
+<p>Each colour has a HTML class that can be used to apply that colour as a font colour, or background color.</p>
+<ul>
+    <li><code>color--blue--4</code> will apply a text colour of <code>#67a9f1</code> to the element it's applied to.</li>
+    <li><code>background-color--green--2</code> will apply a background colour of <code>#a3dea5</code> to the element it's applied to.</li>
+    <li><code>color--red</code> will apply a text colour of <code>#cc0000</code> to the element it's applied to.</li>
+</ul>
+
+<h3>Applying colours in CSS</h3>
+<p>The web toolkit includes a function for getting a colour from the palette. (Note, if the 2nd parameter is omitted it'll default to the 'base' shade)</p>
+<ul>
+    <li><code>color: color('red', 3);</code> will apply a text colour of <code>#e06666</code>.</li>
+    <li><code>color: color('red');</code> will apply a text colour of <code>#cc0000</code>.</li>
+</ul>
+
+<h3>Example</h3>
+<p><span class="color--red">Redgate red</span> is <code>#cc0000</code>.</p>
+
+<!--#include virtual="/includes/footer.html" -->
